@@ -1,0 +1,90 @@
+.work {
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+
+        
+        @media screen and (max-width: 770px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__card {
+        position:relative;
+
+        &:hover {
+            .work-card__text {
+                display: flex;
+                transition: all ease-in-out 0.3s;
+                cursor: pointer;
+            }
+        }
+
+        &:active{
+            .work-card__text {
+                display: flex;
+                background: @crimson-work-background-color;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+
+        .work-card {
+
+            &__image-wrapper {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                background: @red-background-opacity-color;
+                display: none;
+            }
+
+            &__title {
+                .font-normal-big;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                text-transform: uppercase;
+                color: @white-text-color;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 1024px) {
+                    .font-normal-big-media1024;
+                }
+
+                @media screen and (max-width: 770px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            
+            &__description {
+                .font-normal-basic;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: @white-text-color;
+
+                @media screen and (max-width: 1024px) {
+                    .font-normal-basic-media1024;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.features {
+
+    &__wrapper {
+        padding: 116px 0 42px 0;
+
+        @media screen and (max-width: 1024px) {
+            padding: 77px 0 38px 0;
+        }
+
+        @media screen and (max-width: 860px) {
+            padding: 58px 0 20px 0;
+        }
+
+        @media screen and (max-width: 500px) {
+            padding: 40px 0 0px 0;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 992px) {
+            justify-content: space-evenly;
+        }
+
+        .features-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 370px;
+            padding-bottom: 52px;
+
+            @media screen and (max-width: 1190px) {
+                max-width: 315px;
+                padding-bottom: 30px;
+            }
+
+            @media screen and (max-width: 1024px) {
+                padding-bottom: 22px;
+            }
+
+            @media screen and (max-width: 500px) {
+                padding-bottom: 41px;
+            }
+
+            &__icon {
+                // width: 100px;
+                margin-bottom: 29px;
+
+                @media screen and (max-width: 1024px) {
+                    max-width: 85px;
+                    height: 85px;
+                    margin-bottom: 41px;
+                }
+
+                @media screen and (max-width: 500px) {
+                    max-width: 75px;
+                    height: 75px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__title {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                padding: 21px 0;
+
+                @media screen and (max-width: 1024px) {
+                    padding: 2px 0;
+                }
+
+                @media screen and (max-width: 500px) {
+                    padding: 8px 0;
+                }
+
+                h3 {
+                    .font-normal-big;
+                    color: @shark-text-color;
+                    text-transform: uppercase;
+
+                    @media screen and (max-width: 1024px) {
+                        .font-normal-big-media1024;
+                    }
+                }
+            }
+
+            &__text {
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                h5 {
+                    .font-normal-basic;
+                    color: @nevada-text-color;
+
+                    @media screen and (max-width: 1024px) {
+                        .font-normal-basic-media1024;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

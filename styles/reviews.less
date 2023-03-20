@@ -1,0 +1,187 @@
+.reviews {
+    .reviews__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__block {
+        display: flex;
+        align-items: center;
+        max-height: 490px;
+        width: 100%;
+        background: @eggplant-background-color;
+        margin-bottom: 31px;
+    }
+
+    &__image-wrapper {
+        display: flex;
+        max-width: 741px;
+
+        @media screen and (max-width: 1230px) {
+            max-width: 670px;
+        }
+
+        @media screen and (max-width: 1150px) {
+            max-width: 630px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px 0 129px;
+        color: @white-text-color;
+
+        @media screen and (max-width: 1150px) {
+            padding: 0 10px 0 88px;
+        }
+
+        &-text {
+            max-width: 497px;
+            padding: 19px 0;
+    
+            @media screen and (max-width: 1150px) {
+                max-width: 334px;
+                padding: 17px 0;
+            }
+    
+            h2 {
+                font-family: 'Cardo';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 49px;
+                display: flex;
+                align-items: center;
+                text-transform: capitalize;
+    
+                @media screen and (max-width: 1150px) {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+
+    &__content-user {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1150px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .radio__input{
+            display: none;
+
+            & + label::before{
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                border: 1px solid @falcon-background-color;
+                border-radius: 50%;
+                margin-right: 25px;
+                }
+
+            &:checked + label::before{
+                background: @falcon-background-color;
+            }
+        }
+
+        .radio__input + label:last-child::before{
+            margin-right: 0px;
+        }
+    }
+    
+
+    @media screen and (max-width: 1070px) {
+        &__block {
+            align-items: start;
+            margin-bottom: 24px;
+        }
+
+        .radio__input + label::before{
+            width: 10px;
+            height: 10px;
+            margin-right: 21px;
+        }
+
+        .radio__input + label:last-child::before{
+            margin-right: 0px;
+        }
+
+        &__image-wrapper {
+            max-width: 502px;
+        }
+            
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 44px 10px 0 80px;
+            color: @white-text-color;
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        &__image-wrapper {
+            max-width: 420px;
+        }
+
+        &__content {
+            padding: 30px 10px 0 50px;
+
+            &-text {
+                padding: 8px 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 740px) {
+        &__block {
+            flex-direction: column;
+            max-height: 100%;
+            margin-bottom: 23px;
+        }
+        &__image-wrapper {
+            max-width: 100%;
+            min-height: 212px;
+        }
+
+        &__content {
+            margin: 0 auto;
+            padding: 30px 0 95px 0px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        &__content {
+            padding: 0px 0 99px 0px;
+
+            &-text {
+                text-align: center;
+                max-width: 300px;
+                padding: 26px 0;
+            }
+
+            &-user {
+                justify-content: center;
+            }
+        }
+    }
+}
